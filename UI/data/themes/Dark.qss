@@ -618,21 +618,22 @@ QLabel#warningLabel {
 }
 
 QLabel#errorLabel {
-    color: rgb(192, 0, 0);
+    color: rgb(255, 65, 51); /* Red Error */
     font-weight: bold;
+}
+
+QLabel::disabled {
+    color: rgb(122,121,122); /* light */
 }
 
 * [themeID="warning"] {
     color: rgb(192, 128, 0);
-    font-weight: bold;
 }
 
 * [themeID="error"] {
-    color: rgb(192, 0, 0);
-    font-weight: bold;
+    color: rgb(255, 65, 51); /* Red Error */
 }
 
 * [themeID="good"] {
     color: rgb(0, 192, 0);
-    font-weight: bold;
 }

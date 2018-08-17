@@ -544,6 +544,10 @@ QComboBox::down-arrow:hover {
 	image: url(./Rachni/down_arrow.png);
 }
 
+QComboBox::disabled {
+	color: rgb(118, 121, 124); /* Light Gray */
+}
+
 /*********************/
 /* --- Spinboxes --- */
 /*********************/
@@ -855,7 +859,7 @@ QPushButton:checked:hover {
 QPushButton:disabled {
 	background-color: rgb(0, 139, 163); /* Dark Cyan (Primary Dark) */
 	border: 1px solid rgb(0, 139, 163); /* Dark Cyan (Primary Dark) */
-	color: rgb(162, 161, 162); /* Lighter Gray */
+	color: rgb(118, 121, 124); /* Light Gray */
 }
 
 QPushButton::menu-indicator {
@@ -890,7 +894,7 @@ QDialogButtonBox QPushButton:pressed {
 QDialogButtonBox QPushButton:disabled {
 	background-color: rgb(0, 139, 163); /* Dark Cyan (Primary Dark) */
 	border: 1px solid rgb(0, 139, 163); /* Dark Cyan (Primary Dark) */
-	color: rgb(162, 161, 162); /* Lighter Gray */
+	color: rgb(118, 121, 124); /* Light Gray */
 }
 
 /*******************************/
@@ -1016,7 +1020,7 @@ QPushButton:pressed[themeID="hotkeyButtons"] {
 
 QPushButton:disabled[themeID="hotkeyButtons"] {
 	background-color: rgb(58, 64, 69); /* Light Blue-gray */
-	color: rgb(162, 161, 162); /* Lighter Gray */
+	color: rgb(118, 121, 124); /* Light Gray */
 }
 
 /******************/
@@ -1039,8 +1043,12 @@ QLabel#warningLabel {
 }
 
 QLabel#errorLabel {
-	color: rgb(186, 45, 101); /* Dark Pink (Secondary Dark) */
+	color: rgb(255, 89, 76); /* Red Error */
 	font-weight: bold;
+}
+
+QLabel::disabled {
+	color: rgb(118, 121, 124); /* Light Gray */
 }
 
 /****************************/

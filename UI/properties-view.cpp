@@ -1198,9 +1198,9 @@ static void UpdateFPSLabels(OBSFrameRatePropertyWidget *w)
 	if (!valid_fps) {
 		w->currentFPS->setHidden(true);
 		w->timePerFrame->setHidden(true);
-		if (!option) {
-			w->warningLabel->setProperty("themeID", "error");
-		}
+		//if (!option) {
+		//	w->warningLabel->setProperty("themeID", "error");
+		//}
 
 		return;
 	}
@@ -1209,10 +1209,10 @@ static void UpdateFPSLabels(OBSFrameRatePropertyWidget *w)
 	w->timePerFrame->setHidden(false);
 
 	media_frames_per_second match{};
-	if (!option && !matches_ranges(match, *valid_fps, w->fps_ranges, true))
-		w->warningLabel->setProperty("themeID", "error");
-	else
-		w->warningLabel->setProperty("themeID", "");
+	//if (!option && !matches_ranges(match, *valid_fps, w->fps_ranges, true))
+	//	w->warningLabel->setProperty("themeID", "error");
+	//else
+	//	w->warningLabel->setProperty("themeID", "");
 
 	auto convert_to_fps = media_frames_per_second_to_fps;
 	auto convert_to_frame_interval =
@@ -1388,7 +1388,7 @@ void OBSPropertiesView::AddProperty(obs_property_t *property,
 		label = new QLabel(QT_UTF8(obs_property_description(property)));
 
 	if (warning && label) //TODO: select color based on background color
-		label->setStyleSheet("QLabel { color: red; }");
+		label->setProperty("themeID", "error");
 
 	if (label && minSize) {
 		label->setMinimumWidth(minSize);
@@ -1397,7 +1397,7 @@ void OBSPropertiesView::AddProperty(obs_property_t *property,
 
 	if (label && !obs_property_enabled(property))
 		label->setEnabled(false);
-
+	
 	if (!widget)
 		return;
 
