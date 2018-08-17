@@ -101,17 +101,18 @@ QLabel#errorLabel {
     font-weight: bold;
 }
 
+QLabel::disabled {
+    color: rgb(122,121,122);
+}
+
 * [themeID="warning"] {
     color: rgb(192, 128, 0);
-    font-weight: bold;
 }
 
 * [themeID="error"] {
     color: rgb(192, 0, 0);
-    font-weight: bold;
 }
 
 * [themeID="good"] {
     color: rgb(0, 128, 0);
-    font-weight: bold;
 }
